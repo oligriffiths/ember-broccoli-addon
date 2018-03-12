@@ -1,5 +1,20 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1>Welcome to the static markdown renderer</h1>
+
+<p>Some markdown should be rendered</p>
+
+<div>
+    {{#static-markdown}}
+
+# This is some sample inline markdown
+
+This markdown is embedded within a block component.
+    {{/static-markdown}}
+</div>
+
+<hr />
+
+Here is some markdown referencing a markdown file:
+
+{{static-markdown file="docs/test.md"}}
 
 {{outlet}}
